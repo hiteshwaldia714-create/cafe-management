@@ -1,0 +1,12 @@
+.env
+venv/
+__pycache__/
+cafe.db
+cafe_backup.db
+Cafe_Sessions.xlsx
+
+node_modules/
+.DS_Store
+tempCodeRunnerFile.py
+
+icons/1789940742303935.mp4

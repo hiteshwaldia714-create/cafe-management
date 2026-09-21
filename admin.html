@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cafe Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="admin-login" id="adminLogin">
+
+    <h1>Admin Window</h1>
+    <div class="adminid">
+    <label for="usename"> Admin Username</label>
+    <input
+        type="text"
+        id="adminUsername"
+        placeholder="Username"
+    >
+</div>
+    <div class="adminpass">
+        <label for="password">Password</label>
+    <input
+        type="password"
+        id="adminPassword"
+        placeholder="Password"
+    >
+    </div>
+
+    <button id="adminLoginButton">
+        LOGIN
+    </button>
+
+</div>
+
+
+    <div id="adminDashboard">
+
+    <h1 id="adminDashboardTitle">Cafe Admin Dashboard</h1>
+    <button id="adminLogoutButton">
+        LOGOUT
+    </button>
+
+    <div class="summary-container">
+
+        <div class="summary-card">
+            <h2 id="totalPCs">0</h2>
+            <p>Total PCs</p>
+        </div>
+    
+        <div class="summary-card">
+            <h2 id="inUsePCs">0</h2>
+            <p>In Use</p>
+        </div>
+    
+        <div class="summary-card">
+            <h2 id="availablePCs">0</h2>
+            <p>Available</p>
+        </div>
+    
+    </div>
+    <div class="summary-container">
+
+        <div class="summary-card">
+            <h2 id="customersToday">0</h2>
+            <p>Customers Today</p>
+        </div>
+    
+        <div class="summary-card">
+            <h2 id="sessionsToday">0</h2>
+            <p>Sessions Today</p>
+        </div>
+    
+        <div class="summary-card">
+            <h2 id="currentlyPlaying">0</h2>
+            <p>Currently Playing</p>
+        </div>
+    
+    </div>
+
+    <!-- CURRENT PC STATUS -->
+    <h2 id="currentpc">Current PCs</h2>
+
+    <div id="pcContainer"></div>
+
+
+    <!-- SESSION HISTORY -->
+    <h2>Session History</h2>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Customer</th>
+                    <th>PC</th>
+                    <th>Login Time</th>
+                    <th>Logout Time</th>
+                    <th>Duration</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="sessionContainer">
+                <!-- Sessions will appear here -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- CUSTOMER MANAGEMENT -->
+
+<h2>Customers</h2>
+<div class="table-container">
+
+    <div class="customer-controls">
+
+        <input
+            type="text"
+            id="customerSearch"
+            placeholder="Search customer..."
+        >
+
+        <button id="addCustomerButton">
+            + ADD CUSTOMER
+        </button>
+
+    </div>
+
+    <table>
+        ...
+    </table>
+
+</div>
+
+<div class="table-container">
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Customer ID</th>
+                <th>Customer Name</th>
+                <th>Action</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="customerContainer">
+            <!-- Customers will appear here -->
+        </tbody>
+
+    </table>
+
+</div>
+
+<div id="customerModal" class="modal">
+
+    <div class="modal-content">
+
+        <h2>Add New Customer</h2>
+
+        <input
+            type="text"
+            id="newCustomerName"
+            placeholder="Customer Name"
+        >
+
+        <input
+            type="text"
+            id="newCustomerId"
+            placeholder="Customer ID"
+        >
+
+        <input
+            type="password"
+            id="newCustomerPassword"
+            placeholder="Password"
+        >
+
+        <input
+            type="password"
+            id="confirmCustomerPassword"
+            placeholder="Confirm Password"
+        >
+
+        <button id="saveCustomerButton">
+            ADD CUSTOMER
+        </button>
+
+        <button id="cancelCustomerButton">
+            CANCEL
+        </button>
+
+    </div>
+
+</div>
+
+<div id="historyModal" class="modal">
+
+    <div class="modal-content">
+
+        <h2 id="historyTitle">Customer History</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>PC</th>
+                        <th>Login Time</th>
+                        <th>Logout Time</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+
+                <tbody id="historyContainer">
+                    <!-- History will appear here -->
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <button id="closeHistoryButton">
+            CLOSE
+        </button>
+
+    </div>
+
+</div>
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

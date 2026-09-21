@@ -1,0 +1,19 @@
+{
+    "valorant": {
+        "name": "VALORANT",
+        "enabled": true,
+        "launchCommand": "open -a Calculator"
+    },
+
+    "gta": {
+        "name": "GTA V",
+        "enabled": false,
+        "launchCommand": ""
+    },
+
+    "cs2": {
+        "name": "CS2",
+        "enabled": false,
+        "launchCommand": ""
+    }
+}

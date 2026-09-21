@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cafe Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<video autoplay muted loop playsinline id="backgroundvideo">
+    <source src="icons/1789940742303935.mp4" type="video/mp4">
+</video>
+
+<body>
+
+    <!-- LOGIN SCREEN -->
+
+    <div class="login-container" id="loginScreen">
+
+        <h1 id="logintitle">Vsquare Gaming</h1>
+        
+        <label for="customerId">Customer ID</label>
+        <input
+            type="text"
+            id="customerId"
+            placeholder="Customer ID"
+        >
+
+        <div class="password-container">
+
+            <label for="password">Password</label>
+        
+            <div class="password-input-wrapper">
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                >
+        
+                <button type="button" id="togglePassword">
+                    SHOW
+                </button>
+            </div>
+        
+        </div>
+
+        <button id="loginButton">LOGIN</button>
+
+    </div> 
+
+
+    <!-- DASHBOARD -->
+
+    <div class="dashboard" id="dashboard">
+
+        <h1 class="wave-text">
+            <span>V</span>
+            <span>s</span>
+            <span>q</span>
+            <span>u</span>
+            <span>a</span>
+            <span>r</span>
+            <span>e</span>
+            <span>&nbsp;</span>
+            <span>G</span>
+            <span>a</span>
+            <span>m</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+        </h1>
+    
+        <div class="game-container" id="gameContainer">
+
+        </div>
+    
+        <div class="session-info">
+    
+            <p>
+                PC: <span id="pcName"></span>
+            </p>
+    
+            <p>
+                <span id="customerName"></span>
+            </p>
+    
+            <p>
+                ⏱ <span id="sessionDuration">00:00:00</span>
+            </p>
+    
+            <button id="logoutButton">
+                LOGOUT
+            </button>
+    
+        </div>
+    
+    </div>
+
+
+ <script src="renderer.js"></script> 
+
+</body>
+
+</html>
